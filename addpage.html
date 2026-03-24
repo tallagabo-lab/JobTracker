@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Job - JobTracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Βασικό style για Add Job */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Exit X */
+    #exitBtn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    #exitBtn:hover {
+      color: #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.add {
+      background-color: #4f46e5;
+      color: #fff;
+    }
+
+    button.add:hover {
+      background-color: #4338ca;
+    }
+
+    button.cancel {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    button.cancel:hover {
+      background-color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Exit Button -->
+    <button id="exitBtn">&times;</button>
+
+    <!-- Logo -->
+    <div class="logo">JobTracker</div>
+
+    <!-- Form -->
+    <h2>Add New Job</h2>
+    <form id="addJobForm">
+      <div>
+        <label for="jobTitle">Job Title *</label>
+        <input type="text" id="jobTitle" name="jobTitle" placeholder="Frontend Developer" required>
+      </div>
+
+      <div>
+        <label for="company">Company *</label>
+        <input type="text" id="company" name="company" placeholder="TechCorp" required>
+      </div>
+
+      <div>
+        <label for="salary">Salary</label>
+        <input type="text" id="salary" name="salary" placeholder="$120k - $150k">
+      </div>
+
+      <div>
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Job description, requirements, etc."></textarea>
+      </div>
+
+      <div>
+        <label for="status">Status *</label>
+        <select id="status" name="status" required>
+          <option value="wishlist">Wishlist</option>
+          <option value="applied" selected>Applied</option>
+          <option value="interview">Interview</option>
+          <option value="offer">Offer</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="add">Add Job</button>
+        <button type="button" class="cancel" id="cancelBtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Όταν φορτώνει η σελίδα
+    document.addEventListener("DOMContentLoaded", () => {
+      const addJobForm = document.getElementById("addJobForm");
+      const cancelBtn = document.getElementById("cancelBtn");
+      const exitBtn = document.getElementById("exitBtn");
+
+      if(addJobForm){
+        addJobForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Job added successfully!");
+          window.location.href = "dashboard.html"; // Επιστροφή στη dashboard
+        });
+      }
+
+      if(cancelBtn){
+        cancelBtn.addEventListener("click", () => {
+          window.location.href = "dashboard.html";
+        });
+      }
+
+      if(exitBtn){
+        exitBtn.addEventListener("click", () => {
+          window.location.href = "dashboard.html";
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

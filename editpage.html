@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Edit Job - Job Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">JobTracker</div>
+  <button id="closeBtn">Close</button>
+</nav>
+
+<!-- Main Form -->
+<div class="container">
+  <h1>Edit Job Application</h1>
+  <p>Update the details of your job application</p>
+
+  <form id="editJobForm">
+    <!-- Job Title -->
+    <label for="title">Job Title *</label>
+    <input type="text" id="title" name="title" value="Senior Frontend Developer" required>
+
+    <!-- Company -->
+    <label for="company">Company *</label>
+    <input type="text" id="company" name="company" value="TechCorp" required>
+
+    <!-- Description -->
+    <label for="description">Job Description</label>
+    <textarea id="description" name="description" rows="4">We are looking for an experienced Frontend Developer...</textarea>
+
+    <!-- Status & Priority -->
+    <label for="status">Status *</label>
+    <select id="status" name="status" required>
+      <option value="wishlist">Wishlist</option>
+      <option value="applied">Applied</option>
+      <option value="interview" selected>Interview</option>
+      <option value="offer">Offer</option>
+      <option value="rejected">Rejected</option>
+    </select>
+
+    <label for="priority">Priority *</label>
+    <select id="priority" name="priority" required>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high" selected>High</option>
+    </select>
+
+    <!-- Deadline & Salary -->
+    <label for="deadline">Application Deadline</label>
+    <input type="date" id="deadline" name="deadline" value="2026-02-28">
+
+    <label for="salary">Salary Range</label>
+    <input type="text" id="salary" name="salary" value="$120k - $150k">
+
+    <!-- Location -->
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" value="San Francisco, CA (Remote)">
+
+    <!-- URL -->
+    <label for="url">Job Posting URL</label>
+    <input type="url" id="url" name="url" value="https://www.techcorp.com/jobs/frontend-developer">
+
+    <!-- Submit -->
+    <button type="submit">Save Changes</button>
+  </form>
+</div>
+
+<script src="../js/scripts.js"></script>
+</body>
+</html>

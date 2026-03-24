@@ -1,0 +1,126 @@
+
+<b<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - JobTracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Βασικό style για τη σελίδα sign-up */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      text-align: center;
+    }
+
+    /* Logo πάνω κέντρο */
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Exit X πάνω δεξιά */
+    #exitBtn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    #exitBtn:hover {
+      color: #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      padding: 12px;
+      background-color: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #4338ca;
+    }
+
+    .links {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .links a {
+      color: #4f46e5;
+      text-decoration: none;
+      margin-left: 4px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Exit Button -->
+    <button id="ExitBtn">&times;</button>
+
+    <!-- Logo -->
+    <div class="logo">JobTracker</div>
+
+    <!-- Form -->
+    <h2>Sign in to your account</h2>
+    <form id="signupForm">
+      <input type="email" id="email" placeholder="Email address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Create account</button>
+    </form>
+
+    <div class="links">
+   
+      <a href="index.html">Exit</a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+

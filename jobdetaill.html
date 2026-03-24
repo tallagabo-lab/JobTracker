@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Job Details - Job Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">JobTracker</div>
+  <button id="backBtn">Back to Dashboard</button>
+</nav>
+
+<!-- Main Job Info -->
+<div class="container">
+  <div class="job-card">
+    <div class="job-header">
+      <h1 id="jobTitle">Senior Frontend Developer</h1>
+      <p id="jobCompany">TechCorp</p>
+      <span id="jobStatus">Interview</span>
+      <span id="jobPriority">High Priority</span>
+      <button id="editBtn">Edit</button>
+      <button id="deleteBtn">Delete</button>
+    </div>
+
+    <!-- Quick Info Grid -->
+    <div class="quick-info">
+      <div>
+        <p>Applied Date</p>
+        <p id="appliedDate">Feb 5, 2026</p>
+      </div>
+      <div>
+        <p>Deadline</p>
+        <p id="deadline">Feb 28, 2026</p>
+      </div>
+      <div>
+        <p>Salary</p>
+        <p id="salary">$120k - $150k</p>
+      </div>
+      <div>
+        <p>Location</p>
+        <p id="location">San Francisco, CA (Remote)</p>
+      </div>
+    </div>
+
+    <!-- Job Description -->
+    <div class="job-description">
+      <h2>Job Description</h2>
+      <p id="jobDescription">
+        We are looking for an experienced Frontend Developer...
+      </p>
+    </div>
+
+    <!-- Tags -->
+    <div class="job-tags">
+      <h2>Tags</h2>
+      <span class="tag">React</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">Remote</span>
+      <span class="tag">Senior</span>
+    </div>
+
+    <!-- Notes -->
+    <div class="job-notes">
+      <h2>Notes</h2>
+      <p id="jobNotes">
+        Had initial phone screening on Feb 3rd. Technical interview scheduled for Feb 15th.
+      </p>
+    </div>
+
+    <!-- Sidebar: Job URL & Contact Info -->
+    <div class="sidebar">
+      <div>
+        <h3>Job Posting</h3>
+        <a href="https://techcorp.com/careers/senior-frontend-dev" target="_blank">View Original Posting</a>
+      </div>
+      <div>
+        <h3>Contact Information</h3>
+        <p id="contactName">Sarah Johnson</p>
+        <p id="contactEmail">sarah.johnson@techcorp.com</p>
+      </div>
+      <div>
+        <h3>Timeline</h3>
+        <p>Application Submitted: Feb 5, 2026</p>
+        <p>Status: Interview</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

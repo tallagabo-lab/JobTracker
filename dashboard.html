@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Job Tracker</title>
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">JobTracker</div>
+  <div class="nav-right">
+    <span>Welcome back!</span>
+    <button id="logoutBtn">Logout</button>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+
+  <!-- Header -->
+  <header class="dashboard-header">
+    <h1>My Job Applications</h1>
+    <p>Track and manage all your job applications in one place</p>
+  </header>
+
+  <!-- Stats Cards -->
+  <div class="stats-cards">
+    <div class="card"><p>Total Applications</p><h2>2</h2></div>
+    <div class="card"><p>In Progress</p><h2>1</h2></div>
+    <div class="card"><p>Interviews</p><h2>1</h2></div>
+    <div class="card"><p>Offers</p><h2>0</h2></div>
+  </div>
+  
+  <!-- Charts -->
+<div class="charts">
+  <canvas id="progressChart" width="300" height="200"></canvas>
+  <canvas id="statusChart" width="300" height="200"></canvas>
+  <canvas id="weeklyChart" width="300" height="200"></canvas>
+</div>
+
+  <!-- Action Bar -->
+  <div class="actions">
+    <input type="text" id="search" placeholder="Search jobs, companies...">
+    <button id="filterBtn">Filter</button>
+    <button id="addJobBtn">Add Job</button>
+	
+  </div>
+
+  <!-- Jobs Table -->
+  <div class="jobs-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Position</th>
+          <th>Status</th>
+          <th>Applied Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="jobsBody">
+        <!-- Jobs θα φορτωθούν με JS -->
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>
